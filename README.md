@@ -3,6 +3,8 @@
 This repo provides an overview of  Searching Algorithms. 
 Searching algorithms are techniques for finding specific elements within a collection of data. They are fundamental in computer science and are used in various applications such as databases, search engines etc. 
 
+This readme gives an outlook on searching algorithms in general but the codebase however only has three search algorithms implemented in it - Linear search, Binary search, Exponential search
+
 1. Linear Search
 Linear search is a straightforward search algorithm that checks each element of the list sequentially until the desired element is found or the list ends, after we find the target integer we can use the swap algo to pluck it out.
 
@@ -20,13 +22,13 @@ Worst Case: O(n) (if the target is the last element or not present).
 Simple and effective for small or unsorted lists.
 No preprocessing of the list is required.
 
-3. Binary Search
+2. Binary Search
 Binary search is an efficient algorithm for finding an element in a sorted array by repeatedly dividing the search interval in half. It leverages the sorted property of the array to reduce the search space significantly.
 How it works is simple, we start with two pointers, low at the beginning of the array and high at the end of the array.
 
 
 
-4. Exponential Search
+3. Exponential Search
 Exponential search is an algorithm for searching in a sorted array that combines binary search with an exponential growth step to find the range where the target may lie.
 The following steps show how the algorithm works
 -Start with the first element.
@@ -39,7 +41,7 @@ Appliation
 Efficient for large, sorted arrays where binary search alone may not be optimal.
 Particularly useful when the position of the target element is not known and the array is unbounded (or very large).
 
-5. Ternary Search
+4. Ternary Search
 Ternary search is an extension of binary search that divides the array into three parts instead of two. It is used for finding the maximum or minimum of a unimodal function or for searching in a sorted array.
 The following steps are followed to implement Ternary search (The ;ogic behind the imnplementation)
 i. Divide the array into three parts by two mid points: mid1 and mid2.
@@ -50,13 +52,13 @@ iii. Depending on the comparison, narrow the search based on the following condi
 - If the key is between mid1 and mid2, search in the middle third.
 Repeat the process until the key is found or the search space is empty.
 
-- Time Complexity
+  Time Complexity
 Best and Average Case: O(log3 n), n =  number of elements.
 Worst Case: O(log3 n).
 Application
 Useful in cases where a binary search would work, but it offers no substantial improvement over binary search in typical applications.
 
-6. Jump Search
+5. Jump Search
 Jump search is an algorithm for searching in a sorted array that works by jumping ahead by fixed steps and then performing a linear search within a smaller segment.
 The following steps are followed to implement Ternary search (The ;ogic behind the imnplementation)
 i. Determine a fixed jump size m (usually √n where n is the number of elements).
